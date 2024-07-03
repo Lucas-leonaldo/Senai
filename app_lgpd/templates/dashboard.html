@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Dados Sensíveis</title>
+</head>
+<body>
+    <h1>Dashboard de Dados Sensíveis</h1>
+    <p>Total de Dados Tokenizados: {{ total_tokenizado }}</p>
+    <h2>Distribuição de Tipos de Dados Sensíveis</h2>
+    <img src="data:image/png;base64,{{ grafico }}" alt="Gráfico de Dados Sensíveis">
+    <h2>Detalhes dos Dados Sensíveis</h2>
+    <ul>
+        {% for dados in tipos_dados %}
+            <li>{{ dados.tipo_dado_sensivel }}: {{ dados.count }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
